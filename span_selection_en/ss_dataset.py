@@ -16,11 +16,11 @@ class Ss_dataset(Dataset):
         self.tagger = span_tagger
         self.max_len = max_len
 
-        path = '../data4bert/nyt_star/train_data_new.json'
+        path = '../data4bert/nyt_star/train_data_tmp.json'
 
         assert div_path in ['nyt', 'webnlg'], 'div_path error'
         assert mode in ['train', 'test'], 'mode error'
-        path = f'../data4bert/{div_path}_star/{mode}_data_new.json'
+        path = f'../data4bert/{div_path}_star/{mode}_data.json'
 
         with open(path, 'r', encoding='utf-8-sig') as f:
             x = json.load(f)
